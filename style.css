@@ -1,137 +1,113 @@
-/* style.css */
-
-/* Configuração geral da página */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f7f3; /* Cor de fundo creme suave */
-    color: #333;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-/* Estilo do Cabeçalho */
-header {
-    background-color: #e2d8c8; /* Um tom areia elegante */
-    padding: 50px 20px;
-    margin-bottom: 30px;
-}
-
-h1 {
-    font-family: 'Georgia', serif;
-    font-size: 2.5em;
-    margin: 0;
-    color: #4a4238;
-}
-
-h2 {
-    font-family: 'Georgia', serif;
-    color: #4a4238;
-    margin-bottom: 20px;
-}
-
-/* Estilo dos Blocos (Seções) */
-section {
-    background-color: #ffffff;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-    padding: 30px;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra suave */
-    width: 90%; /* Garante que fique bom no celular */
-}
-
-/* Estilo do Formulário */
-form {
-    text-align: left;
-}
-
-label {
-    font-weight: bold;
-    color: #555;
-    font-size: 0.9em;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Impede que o campo saia da tela */
-    font-size: 1em;
-}
-
-/* Estilo do Botão */
-button {
-    width: 100%;
-    padding: 15px;
-    background-color: #4a4238; /* Botão combinando com o texto */
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #332d26; /* Cor mais escura quando passa o mouse */
-}
-
-/* Ajuste da imagem do QR Code */
-img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin: 15px 0;
-}
-
 /* =========================================
-   NOVAS TRANSIÇÕES E ESTILO DO MONOGRAMA
+   ESTILO GERAL E FONTE MINIMALISTA (Inter / Montserrat)
    ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Força todas as tags do site a usarem a mesma fonte minimalista */
+body, h1, h2, h3, h4, p, a, input, button, label, small {
+    font-family: 'Inter', sans-serif !important;
+}
 
 /* Deixa a rolagem da página inteira mais suave */
 html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #fdfbf7; /* Fundo creme bem suave e aconchegante */
+    color: #4a4238;          /* Tom de cinza/marrom escuro e elegante para os textos */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
 /* Configuração da imagem da capa (Monograma) */
 .monograma {
-    max-width: 180px; /* Altere esse número para deixar o logo maior ou menor */
+    max-width: 160px;
     height: auto;
-    margin-bottom: 20px;
-    /* border-radius: 50%; Remova as barras e asteriscos desta linha se quiser forçar a imagem a ficar redonda */
+    margin-bottom: 15px;
 }
 
-/* Animação que faz o conteúdo surgir suavemente */
-.fade-in {
-    animation: surgir 1.5s ease-out forwards;
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 50px 20px;
 }
 
-/* Aplicando a transição também aos blocos (sections) */
+header h1 {
+    font-weight: 500;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-weight: 300;
+    color: #777;
+    font-size: 1.1em;
+}
+
+/* Seções do site */
 section {
-    animation: surgir 1.5s ease-out forwards;
+    max-width: 600px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #f0e6d8;
+    animation: surgir 1.2s ease-out forwards;
 }
 
-/* A "mágica" da animação: vem de baixo e de transparente para visível */
-@keyframes surgir {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+section h2 {
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #4a4238;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Formulário e Inputs */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2d8c8;
+    border-radius: 8px;
+    background-color: #faf8f5;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4a4238;
+}
+
+/* Botões minimalistas */
+button[type="submit"] {
+    width: 100%;
+    background-color: #4a4238;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #383129;
 }
 
 /* =========================================
-   LISTA DE PRESENTES INTERATIVA
+   LISTA DE PRESENTES E GRADE INTERATIVA
    ========================================= */
 
-/* Grade de presentes (ajusta automaticamente no celular) */
 .grid-presentes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -139,7 +115,6 @@ section {
     margin-top: 20px;
 }
 
-/* Estilo de cada cartão de presente */
 .card-presente {
     background-color: #ffffff;
     border: 1px solid #e2d8c8;
@@ -147,38 +122,43 @@ section {
     padding: 20px;
     cursor: pointer;
     transition: 0.3s;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+    text-align: left;
 }
 
 .card-presente:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
     border-color: #4a4238;
 }
 
 .emoji-presente {
-    font-size: 2.5em;
+    font-size: 2.2em;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .card-presente h4 {
-    margin: 5px 0;
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    font-weight: 600;
     color: #4a4238;
 }
 
 .card-presente p {
-    font-size: 0.9em;
+    font-size: 0.85em;
+    font-weight: 300;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .card-presente strong {
     color: #2e7d32;
-    font-size: 1.1em;
+    font-size: 1em;
+    font-weight: 600;
 }
 
-/* Estilo da Janela Flutuante (Modal) do QR Code */
+/* Janela Flutuante (Modal) do QR Code */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -187,7 +167,7 @@ section {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
 }
@@ -198,21 +178,33 @@ section {
     border-radius: 15px;
     text-align: center;
     width: 85%;
-    max-width: 400px;
+    max-width: 380px;
     position: relative;
-    animation: surgir 0.4s ease-out forwards;
+    animation: surgir 0.3s ease-out forwards;
 }
 
 .fechar-modal {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #aaa;
+    top: 12px;
+    right: 18px;
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #888;
     cursor: pointer;
 }
 
 .fechar-modal:hover {
-    color: #333;
+    color: #111;
+}
+
+/* Animação suave */
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
