@@ -1,35 +1,28 @@
-/* =========================================
-   ESTILO GERAL E FONTE MINIMALISTA (Inter / Montserrat)
-   ========================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
-/* Força todas as tags do site a usarem a mesma fonte minimalista */
-body, h1, h2, h3, h4, p, a, input, button, label, small {
+/* RESET E FONTE ÚNICA GLOBAL */
+* {
     font-family: 'Inter', sans-serif !important;
 }
 
-/* Deixa a rolagem da página inteira mais suave */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #fdfbf7; /* Fundo creme bem suave e aconchegante */
-    color: #4a4238;          /* Tom de cinza/marrom escuro e elegante para os textos */
+    background-color: #fdfbf7;
+    color: #4a4238;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
-/* Configuração da imagem da capa (Monograma) */
 .monograma {
     max-width: 160px;
     height: auto;
     margin-bottom: 15px;
 }
 
-/* Cabeçalho */
 header {
     text-align: center;
     padding: 50px 20px;
@@ -48,7 +41,6 @@ header p {
     font-size: 1.1em;
 }
 
-/* Seções do site */
 section {
     max-width: 600px;
     margin: 30px auto;
@@ -57,7 +49,6 @@ section {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.03);
     border: 1px solid #f0e6d8;
-    animation: surgir 1.2s ease-out forwards;
 }
 
 section h2 {
@@ -68,7 +59,6 @@ section h2 {
     text-align: center;
 }
 
-/* Formulário e Inputs */
 input[type="text"], input[type="number"] {
     width: 100%;
     padding: 12px;
@@ -86,7 +76,6 @@ input:focus {
     border-color: #4a4238;
 }
 
-/* Botões minimalistas */
 button[type="submit"] {
     width: 100%;
     background-color: #4a4238;
@@ -104,10 +93,7 @@ button[type="submit"]:hover {
     background-color: #383129;
 }
 
-/* =========================================
-   LISTA DE PRESENTES E GRADE INTERATIVA
-   ========================================= */
-
+/* GRID DE PRESENTES */
 .grid-presentes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -158,7 +144,7 @@ button[type="submit"]:hover {
     font-weight: 600;
 }
 
-/* Janela Flutuante (Modal) do QR Code */
+/* MODAL DO QR CODE */
 .modal-overlay {
     display: none;
     position: fixed;
@@ -180,7 +166,6 @@ button[type="submit"]:hover {
     width: 85%;
     max-width: 380px;
     position: relative;
-    animation: surgir 0.3s ease-out forwards;
 }
 
 .fechar-modal {
@@ -195,16 +180,4 @@ button[type="submit"]:hover {
 
 .fechar-modal:hover {
     color: #111;
-}
-
-/* Animação suave */
-@keyframes surgir {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
