@@ -27,22 +27,43 @@ body {
     margin-bottom: 15px;
 }
 
+/* =========================================
+   CABEÇALHO COM COR DIFERENTE E MONOGRAMA EM DESTAQUE
+   ========================================= */
 header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
+    background-color: #f3ece1; /* Um tom de bege mais encorpado e elegante */
+    border-bottom: 3px solid #e2d8c8;
 }
 
 header h1 {
+    font-family: 'Playfair Display', serif !important;
     font-weight: 600;
-    font-size: 2.3em;
+    font-size: 2.6em;
     letter-spacing: 1px;
     margin-bottom: 5px;
+    color: #4a4238;
 }
 
 header p {
+    font-family: 'Inter', sans-serif !important;
     font-weight: 300;
-    color: #777;
-    font-size: 1.1em;
+    color: #776e62;
+    font-size: 1.15em;
+}
+
+/* Monograma maior e com sombra refinada */
+.monograma {
+    max-width: 210px; /* Aumentado para destacar bem no topo */
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 8px 16px rgba(74, 66, 56, 0.18)); /* Sombra suave e elegante */
+    transition: transform 0.3s ease;
+}
+
+.monograma:hover {
+    transform: scale(1.03); /* Efeito sutil ao passar o mouse */
 }
 
 /* =========================================
