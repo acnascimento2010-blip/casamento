@@ -184,36 +184,48 @@ button[type="submit"]:hover {
     font-weight: 600;
 }
 
-/* MODAL DO QR CODE */
+/* =========================================
+   JANELA FLUTUANTE (MODAL) DO QR CODE CORRIGIDA
+   ========================================= */
 .modal-overlay {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 9999;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro elegante com desfoque */
+    backdrop-filter: blur(5px);
+    
+    /* Centraliza perfeitamente em qualquer tela, sem cortes */
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(5px); /* Efeito de vidro fosco moderno ao fundo */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .modal-content {
     background-color: #fff;
-    padding: 30px;
+    padding: 25px 20px;
     border-radius: 16px;
     text-align: center;
-    width: 85%;
-    max-width: 380px;
+    width: 100%;
+    max-width: 360px;
     position: relative;
-    animation: surgirModal 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    
+    /* Permite rolar internamente caso a tela do celular seja pequena */
+    max-height: 90vh;
+    overflow-y: auto;
+    
+    animation: surgirModal 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes surgirModal {
     from {
         opacity: 0;
-        transform: scale(0.95) translateY(20px);
+        transform: scale(0.9) translateY(15px);
     }
     to {
         opacity: 1;
@@ -223,12 +235,13 @@ button[type="submit"]:hover {
 
 .fechar-modal {
     position: absolute;
-    top: 12px;
-    right: 18px;
-    font-size: 1.4em;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
     font-weight: 400;
     color: #888;
     cursor: pointer;
+    padding: 5px;
 }
 
 .fechar-modal:hover {
