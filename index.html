@@ -281,6 +281,8 @@
             function fecharModal() {
                 document.getElementById('modal-presente').style.display = 'none';
             }
+
+            
         </script>
     </section>
 
@@ -369,6 +371,25 @@
             <p><strong>Favorecido:</strong> André Cardozo do Nascimento</p>
         </div>
     </section>
+<script>
+        // Efeito de transição fluida ao rolar a página (Estilo Apple/Samsung)
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
 
+            const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visivel");
+                    }
+                });
+            }, {
+                threshold: 0.15 // Dispara quando 15% da seção aparece na tela
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
