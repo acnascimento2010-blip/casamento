@@ -1,324 +1,497 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casamento - 16 de Janeiro</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layla e André - 16 de Janeiro de 2027</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para a Página de Boas-Vindas / Carta */
+        #pagina-carta {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/header-bg.jpg') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .carta-card {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            max-width: 650px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .carta-card h1 {
+            font-family: 'Cormorant Garamond', serif;
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 2.5rem;
+        }
+
+        .carta-card p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            color: #444;
+        }
+
+        .assinatura {
+            text-align: right;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #b89753;
+            margin-top: 30px;
+        }
+
+        .btn-entrar {
+            background-color: #b89753;
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-entrar:hover {
+            background-color: #9f8045;
+            transform: translateY(-2px);
+        }
+
+        /* Oculta o conteúdo principal até que o botão seja clicado */
+        #conteudo-principal {
+            display: none;
+        }
+
+        /* Estilos adicionais para o Pix Copia e Cola */
+        .pix-copia-cola-box {
+            background-color: #f7f5f0;
+            border: 1px dashed #b89753;
+            padding: 8px;
+            border-radius: 6px;
+            margin: 10px 0;
+            word-break: break-all;
+            font-family: monospace;
+            font-size: 0.8em;
+            color: #333;
+            max-height: 70px;
+            overflow-y: auto;
+            text-align: left;
+        }
+        .btn-copiar {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: background 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 5px;
+            width: 100%;
+            justify-content: center;
+        }
+        .btn-copiar:hover {
+            background-color: #235d26;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header>
-        <img src="img/monograma.png" alt="Monograma André e Layla" class="monograma">
-        <h1>Layla e André</h1>
-        <p>16 de Janeiro de 2027</p>
-    </header>
+    <!-- ETAPA 1: PÁGINA DA CARTA / BOAS-VINDAS -->
+    <div id="pagina-carta">
+        <div class="carta-card">
+            <h1>Layla & André</h1>
+            <p>Queridos familiares e amigos,</p>
+            <p>Antes de tudo, queremos agradecer a cada um de vocês por fazer parte da nossa história. Por todo o carinho, por tudo o que fizeram por nós até aqui e, principalmente, por cada momento que compartilhamos ao longo da vida.</p>
+            <p>Agora, estamos prestes a viver um dos capítulos mais especiais da nossa história: o início da nossa própria família.</p>
+            <p>E, como a vida é cheia de surpresas, esse novo caminho vai começar um pouquinho mais longe do que imaginávamos. Não será no bairro ao lado, nem na cidade vizinha, mas a aproximadamente 4.998 km de distância!</p>
+            <p>Para quem ainda não sabe, nosso novo lar será em <strong>Boa Vista, Roraima</strong>.</p>
+            <p>É uma mudança e tanto, cheia de expectativas, sonhos e novos desafios. Mas também é a realização de algo muito especial: construir a nossa vida juntos.</p>
+            <p>Por isso, queremos aproveitar cada instante dessa celebração ao lado de vocês. Mais do que comemorar o nosso casamento, queremos celebrar o amor, os laços que construímos e todas as pessoas que, de alguma forma, nos ajudaram a chegar até aqui.</p>
+            <p>A distância pode até mudar os encontros, mas nunca o carinho e o lugar que cada um de vocês ocupa em nossas vidas.</p>
+            <p>Fica aqui o nosso mais sincero obrigado por fazerem parte dessa história.</p>
+            <p>E, em vez de uma despedida, preferimos dizer: até daqui a pouco!</p>
+            
+            <div class="assinatura">
+                Com todo o nosso carinho,<br>
+                Layla e André
+            </div>
+        </div>
 
-    <!-- INFORMAÇÕES DO EVENTO (CERIMÔNIA E RECEPÇÃO) -->
-    <section id="informacoes">
-        <h2>Onde e Quando</h2>
-        
-        <div class="grid-locais">
-            <!-- BLOCO DA CERIMÔNIA -->
-            <div class="card-local">
-                <h3>💍 Cerimônia</h3>
-                <p><strong>Local:</strong> Igreja São Sebastião</p>
-                <p><strong>Endereço:</strong> [Endereço Completo da Igreja]</p>
-                <p><strong>Horário:</strong> Dia 16 de janeiro às 14:00</p>
-                
-                <!-- Botão do Google Maps -->
-                <a href="https://maps.google.com/?q=Igreja+Sao+Sebastiao+Juiz+de+Fora" target="_blank" class="btn-maps">
-                    📍 Ver no Google Maps
-                </a>
-            </div>
+        <button class="btn-entrar" onclick="revelarConvite()">
+            Ver Detalhes e Lista de Presentes ➔
+        </button>
+    </div>
 
-            <!-- BLOCO DA RECEPÇÃO -->
-            <div class="card-local">
-                <h3>🥂 Recepção</h3>
-                <p><strong>Local:</strong> [Nome do Local da Festa]</p>
-                <p><strong>Endereço:</strong> [Endereço Completo da Recepção]</p>
-                <p><strong>Horário:</strong> Logo após a cerimônia</p>
-                
-                <!-- Botão do Google Maps -->
-                <a href="https://maps.google.com/?q=Juiz+de+Fora+MG" target="_blank" class="btn-maps">
-                    📍 Ver no Google Maps
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- FORMULÁRIO DE CONFIRMAÇÃO (RSVP) -->
-    <section id="rsvp">
-        <h2>Confirme sua Presença</h2>
-        
-        <!-- TELA DE SUCESSO -->
-        <div id="mensagem-sucesso" style="display: none; text-align: center;">
-            <h3 style="color: #4a4238; font-size: 1.8em; margin-bottom: 10px;">✔ Presença confirmada!</h3>
-            <p style="font-size: 1.1em; color: #555;">Ficamos muito felizes que você celebrará conosco no dia 16 de Janeiro!</p>
-        </div>
+    <!-- ETAPA 2: CONTEÚDO PRINCIPAL (Revelado após clicar no botão) -->
+    <div id="conteudo-principal">
 
-        <form id="form-presenca" action="https://script.google.com/macros/s/AKfycbwj4uhJXR2bwpahr31Ow3T9sC-HjcrRc1SSSlid052kKQRHS6xcbVQyKBZFeJVFziYA6g/exec" method="POST">
-            <p id="texto-instrucao">Por favor, confirme até o dia 20 de dezembro.</p>
-            
-            <label for="nome">Encontre seu nome na lista:</label><br>
-            <input type="text" id="nome" name="nome" list="lista-convidados" placeholder="Comece a digitar..." required autocomplete="off"><br><br>
+        <!-- CABEÇALHO -->
+        <header>
+            <img src="img/monograma.png" alt="Monograma André e Layla" class="monograma">
+            <h1>Layla e André</h1>
+            <p>A Bênção Nupcial — 16 de Janeiro de 2027</p>
+        </header>
 
-            <datalist id="lista-convidados">
-                <!-- Convidados André -->
-                <option value="Fátima Nascimento"><option value="Júlio Nascimento"><option value="Bárbara Nascimento">
-                <option value="Tânia Cardozo"><option value="Brasilina Cardozo"><option value="Julio Cardozo">
-                <option value="Lenardo Nascimento"><option value="Carla Nascimento"><option value="João Nascimento">
-                <option value="Ronaldo Nascimento"><option value="Elizete Nascimento"><option value="Débora Nascimento">
-                <option value="Gustavo Bertini"><option value="Lucas Amorim"><option value="João Calderano">
-                <option value="João Vitor Soares Pinto"><option value="Vagner Lima"><option value="Pedro Cabral Ribeiro">
-                <option value="José Raisson"><option value="Gabriel Fortes"><option value="Pedro Estrada">
-                <!-- Convidados Layla -->
-                <option value="Gilvania Crovatto da Costa"><option value="Sergio Luis da Costa">
-                <option value="Luis Felipe Crovatto (padrinho)"><option value="Leonardo Crovatto (padrinho)">
-                <option value="Aparecida Sevidanes Crovatto"><option value="Gilson Sevidanes Crovatto"><option value="Gilsara Aparecida Crovatto">
-                <option value="André Luis da Costa"><option value="Aline da Costa"><option value="Felipe da Costa"><option value="Bernardo da Costa">
-                <option value="Marco Aurélio da Costa"><option value="Tereza da Costa"><option value="João Victor da Costa">
-                <option value="Lia Borges (madrinha)"><option value="Thamiris Crovato (madrinha)"><option value="Laura Mattos">
-                <option value="Loren Mylena"><option value="Ramon Marques"><option value="Gabrielle Martins">
-                <option value="Marcela Ruback"><option value="Igor Delgado"><option value="Gabriela Ruback"><option value="Alice Ruback">
-                <option value="Tatiane Santos"><option value="Breno Nogueira"><option value="Elizabeth Francisco"><option value="Marcelo Carvalho">
-                <option value="Ângela Francisco"><option value="Alexandre Santos"><option value="Victor Francisco"><option value="Rafael Dias">
-                <option value="Bruno Carvalho"><option value="Brunno Mendonça"><option value="João Roberto"><option value="Susana">
-                <option value="Pe João Paulo Dias"><option value="Pe Everton Fernandes"><option value="Pe Leonardo José"><option value="Pe Everaldo Sales">
-            </datalist>
+        <!-- INFORMAÇÕES DO EVENTO (CERIMÔNIA E RECEPÇÃO) -->
+        <section id="informacoes">
+            <h2>Onde e Quando</h2>
+            
+            <div class="grid-locais">
+                <!-- BLOCO DA CERIMÔNIA -->
+                <div class="card-local">
+                    <h3>💍 Cerimônia</h3>
+                    <p><strong>Local:</strong> Igreja São Sebastião</p>
+                    <p><strong>Endereço:</strong> [Endereço Completo da Igreja]</p>
+                    <p><strong>Horário:</strong> Dia 16 de janeiro às 14:00 (Sugerimos chegar com 20 min de antecedência)</p>
+                    
+                    <!-- Botão do Google Maps -->
+                    <a href="https://maps.google.com/?q=Igreja+Sao+Sebastiao+Juiz+de+Fora" target="_blank" class="btn-maps">
+                        📍 Ver no Google Maps
+                    </a>
+                </div>
 
-            <label for="acompanhantes">Número de Acompanhantes:</label><br>
-            <input type="number" id="acompanhantes" name="acompanhantes" min="0" max="0" value="0" required>
-            <small id="aviso-acompanhantes" style="color: #666; display: block; margin-top: -15px; margin-bottom: 20px;">Selecione seu nome primeiro.</small>
+                <!-- BLOCO DA RECEPÇÃO -->
+                <div class="card-local">
+                    <h3>🥂 Recepção</h3>
+                    <p><strong>Local:</strong> [Nome do Local da Festa]</p>
+                    <p><strong>Endereço:</strong> [Endereço Completo da Recepção]</p>
+                    <p><strong>Horário:</strong> Logo após a cerimônia</p>
+                    
+                    <!-- Botão do Google Maps -->
+                    <a href="https://maps.google.com/?q=Juiz+de+Fora+MG" target="_blank" class="btn-maps">
+                        📍 Ver no Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FORMULÁRIO DE CONFIRMAÇÃO (RSVP) -->
+        <section id="rsvp">
+            <h2>Confirme sua Presença</h2>
+            
+            <!-- TELA DE SUCESSO -->
+            <div id="mensagem-sucesso" style="display: none; text-align: center;">
+                <h3 style="color: #4a4238; font-size: 1.8em; margin-bottom: 10px;">✔ Presença confirmada!</h3>
+                <p style="font-size: 1.1em; color: #555;">Ficamos muito felizes que você celebrará conosco no dia 16 de Janeiro!</p>
+            </div>
 
-            <button type="submit" id="btn-confirmar">Confirmar</button>
-        </form>
-    </section>
+            <form id="form-presenca" action="https://script.google.com/macros/s/AKfycbwj4uhJXR2bwpahr31Ow3T9sC-HjcrRc1SSSlid052kKQRHS6xcbVQyKBZFeJVFziYA6g/exec" method="POST">
+                <p id="texto-instrucao">Por favor, confirme até o dia 20 de dezembro.</p>
+                
+                <label for="nome">Encontre seu nome na lista:</label><br>
+                <input type="text" id="nome" name="nome" list="lista-convidados" placeholder="Comece a digitar..." required autocomplete="off"><br><br>
 
-    <!-- SEÇÃO DA LISTA DE PRESENTES -->
-    <section id="presentes">
-        <h2>Lista de Presentes</h2>
-        <p>Sua presença é o nosso maior presente! Mas, se desejar contribuir com os nossos planos, clique em um dos itens abaixo para ver o QR Code via PIX:</p>
-        
-        <!-- GRADE DE PRESENTES -->
-        <div class="grid-presentes">
-            <div class="card-presente" onclick="abrirModal('Renovação do Noivo', 'qr-50.png', 'R$ 50,00')">
-                <span class="emoji-presente">🩲</span>
-                <h4>Renovação do Guarda-roupa do Noivo</h4>
-                <p>Ajuda a não andar mais mulambo.</p>
-                <strong>R$ 50,00</strong>
-            </div>
+                <datalist id="lista-convidados">
+                    <!-- Convidados André -->
+                    <option value="Fátima Nascimento"><option value="Júlio Nascimento"><option value="Bárbara Nascimento">
+                    <option value="Tânia Cardozo"><option value="Brasilina Cardozo"><option value="Julio Cardozo">
+                    <option value="Lenardo Nascimento"><option value="Carla Nascimento"><option value="João Nascimento">
+                    <option value="Ronaldo Nascimento"><option value="Elizete Nascimento"><option value="Débora Nascimento">
+                    <option value="Gustavo Bertini"><option value="Lucas Amorim"><option value="João Calderano">
+                    <option value="João Vitor Soares Pinto"><option value="Vagner Lima"><option value="Pedro Cabral Ribeiro">
+                    <option value="José Raisson"><option value="Gabriel Fortes"><option value="Pedro Estrada">
+                    <!-- Convidados Layla -->
+                    <option value="Gilvania Crovatto da Costa"><option value="Sergio Luis da Costa">
+                    <option value="Luis Felipe Crovatto (padrinho)"><option value="Leonardo Crovatto (padrinho)">
+                    <option value="Aparecida Sevidanes Crovatto"><option value="Gilson Sevidanes Crovatto"><option value="Gilsara Aparecida Crovatto">
+                    <option value="André Luis da Costa"><option value="Aline da Costa"><option value="Felipe da Costa"><option value="Bernardo da Costa">
+                    <option value="Marco Aurélio da Costa"><option value="Tereza da Costa"><option value="João Victor da Costa">
+                    <option value="Lia Borges (madrinha)"><option value="Thamiris Crovato (madrinha)"><option value="Laura Mattos">
+                    <option value="Loren Mylena"><option value="Ramon Marques"><option value="Gabrielle Martins">
+                    <option value="Marcela Ruback"><option value="Igor Delgado"><option value="Gabriela Ruback"><option value="Alice Ruback">
+                    <option value="Tatiane Santos"><option value="Breno Nogueira"><option value="Elizabeth Francisco"><option value="Marcelo Carvalho">
+                    <option value="Ângela Francisco"><option value="Alexandre Santos"><option value="Victor Francisco"><option value="Rafael Dias">
+                    <option value="Bruno Carvalho"><option value="Brunno Mendonça"><option value="João Roberto"><option value="Susana">
+                    <option value="Pe João Paulo Dias"><option value="Pe Everton Fernandes"><option value="Pe Leonardo José"><option value="Pe Everaldo Sales">
+                </datalist>
 
-            <div class="card-presente" onclick="abrirModal('Combustível Fitness', 'qr-75.png', 'R$ 75,00')">
-                <span class="emoji-presente">🥜</span>
-                <h4>Combustível Fitness</h4>
-                <p>Patrocinar o estoque de Whey e creatina pros noivos.</p>
-                <strong>R$ 75,00</strong>
-            </div>
+                <label for="acompanhantes">Número de Acompanhantes:</label><br>
+                <input type="number" id="acompanhantes" name="acompanhantes" min="0" max="0" value="0" required>
+                <small id="aviso-acompanhantes" style="color: #666; display: block; margin-top: -15px; margin-bottom: 20px;">Selecione seu nome primeiro.</small>
 
-            <div class="card-presente" onclick="abrirModal('Paz Matinal', 'qr-100.png', 'R$ 100,00')">
-                <span class="emoji-presente">☕</span>
-                <h4>Paz Matinal</h4>
-                <p>Pó de café excelente para começar bem o dia.</p>
-                <strong>R$ 100,00</strong>
-            </div>
+                <button type="submit" id="btn-confirmar">Confirmar</button>
+            </form>
+        </section>
 
-            <div class="card-presente" onclick="abrirModal('Manutenção da Armadura', 'qr-150.png', 'R$ 150,00')">
-                <span class="emoji-presente">🐟</span>
-                <h4>Comida típica de Boa Vista</h4>
-                <p>Ajudar a pagar um prato de Matrinxã em BV-RR</p>
-                <strong>R$ 150,00</strong>
-            </div>
+        <!-- SEÇÃO DA LISTA DE PRESENTES -->
+        <section id="presentes">
+            <h2>Lista de Presentes</h2>
+            <p>Sua presença é o nosso maior presente! Mas, se desejar contribuir com os nossos planos, clique em um dos itens abaixo para presentear via PIX:</p>
+            
+            <!-- GRADE DE PRESENTES -->
+            <div class="grid-presentes">
+                <div class="card-presente" onclick="abrirModal('Renovação do Noivo', 'qr-50.png', 'R$ 50,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento520400005303986540550.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCKAK2TtBZLiu54DkXDmujJ63049EF9')">
+                    <span class="emoji-presente">🩲</span>
+                    <h4>Renovação do Guarda-roupa do Noivo</h4>
+                    <p>Ajuda a não andar mais mulambo.</p>
+                    <strong>R$ 50,00</strong>
+                </div>
 
-            <div class="card-presente" onclick="abrirModal('Gasolina da Lua de Mel', 'qr-200.png', 'R$ 200,00')">
-                <span class="emoji-presente">🚗</span>
-                <h4>Gasolina da Lua de Mel</h4>
-                <p>Um tanque cheio para nossa viagem de carro!</p>
-                <strong>R$ 200,00</strong>
-            </div>
+                <div class="card-presente" onclick="abrirModal('Combustível Fitness', 'qr-75.png', 'R$ 75,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento520400005303986540575.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCzbhcBrjyyV6ghL4CuPtSO6304D441')">
+                    <span class="emoji-presente">🥜</span>
+                    <h4>Combustível Fitness</h4>
+                    <p>Patrocinar o estoque de Whey e creatina pros noivos.</p>
+                    <strong>R$ 75,00</strong>
+                </div>
 
-            <div class="card-presente" onclick="abrirModal('Equipamentos de Sobrevivência', 'qr-300.png', 'R$ 300,00')">
-                <span class="emoji-presente">🎒</span>
-                <h4>Sobrevivência</h4>
-                <p>Investir em equipamentos para nossas trilhas.</p>
-                <strong>R$ 300,00</strong>
-            </div>
+                <div class="card-presente" onclick="abrirModal('Paz Matinal', 'qr-100.png', 'R$ 100,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento5204000053039865406100.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCSbztF8o6ycSG9rluqnuFu6304B1A3')">
+                    <span class="emoji-presente">☕</span>
+                    <h4>Paz Matinal</h4>
+                    <p>Pó de café excelente para começar bem o dia.</p>
+                    <strong>R$ 100,00</strong>
+                </div>
 
-            <div class="card-presente" onclick="abrirModal('Jantar de Recém-casados', 'qr-400.png', 'R$ 400,00')">
-                <span class="emoji-presente">🍷</span>
-                <h4>Jantar Romântico</h4>
-                <p>Prometemos não gastar tudo em comida de rua dessa vez!</p>
-                <strong>R$ 400,00</strong>
-            </div>
+                <div class="card-presente" onclick="abrirModal('Manutenção da Armadura', 'qr-150.png', 'R$ 150,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento5204000053039865406150.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCHXlioe3TQ0HG47uGfuFfj63048073')">
+                    <span class="emoji-presente">🐟</span>
+                    <h4>Comida típica de Boa Vista</h4>
+                    <p>Ajudar a pagar um prato de Matrinxã em BV-RR</p>
+                    <strong>R$ 150,00</strong>
+                </div>
 
-            <div class="card-presente" onclick="abrirModal('Segurança da Noiva', 'qr-500.png', 'R$ 500,00')">
-                <span class="emoji-presente">🏠</span>
-                <h4>Casa nova</h4>
-                <p>Ajudar nas próximas mudanças .</p>
-                <strong>R$ 500,00</strong>
-            </div>
+                <div class="card-presente" onclick="abrirModal('Gasolina da Lua de Mel', 'qr-200.png', 'R$ 200,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento5204000053039865406200.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCfGahlIFvUMZmXkhf1q5cn63048022')">
+                    <span class="emoji-presente">🚗</span>
+                    <h4>Gasolina da Lua de Mel</h4>
+                    <p>Um tanque cheio para nossa viagem de carro!</p>
+                    <strong>R$ 200,00</strong>
+                </div>
 
-            <div class="card-presente" onclick="abrirModal('Fundo do Primeiro Carro', 'qr-750.png', 'R$ 750,00')">
-                <span class="emoji-presente">🚘</span>
-                <h4>Primeiro Carro</h4>
-                <p>Ajudinha pra gente se despedir do BlaBlaCar e ClickBus!</p>
-                <strong>R$ 750,00</strong>
-            </div>
+                <div class="card-presente" onclick="abrirModal('Equipamentos de Sobrevivência', 'qr-300.png', 'R$ 300,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento5204000053039865406300.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCLaafGj1c4i1E0Jf9GZv7y6304F285')">
+                    <span class="emoji-presente">🎒</span>
+                    <h4>Sobrevivência</h4>
+                    <p>Investir em equipamentos para nossas trilhas.</p>
+                    <strong>R$ 300,00</strong>
+                </div>
 
-            <div class="card-presente" onclick="abrirModal('Investidor Anjo', 'qr-1000.png', 'R$ 1.000,00')">
-                <span class="emoji-presente">👼</span>
-                <h4>Investidor Anjo</h4>
-                <p>Ajuda direta na faculdade dos filhos</p>
-                <strong>R$ 1.000,00</strong>
-            </div>
-        </div>
-        
-        <div style="margin-top: 30px; font-size: 0.95em; color: #555;">
-            <p><strong>Chave PIX (E-mail):</strong> acnascimento2010@gmail.com</p>
-            <p><strong>Favorecido:</strong> André Cardozo do Nascimento</p>
-        </div>
-    </section>
+                <div class="card-presente" onclick="abrirModal('Jantar de Recém-casados', 'qr-400.png', 'R$ 400,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento5204000053039865406400.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCqCvkHiY50wBklSogMLdP56304E078')">
+                    <span class="emoji-presente">🍷</span>
+                    <h4>Jantar Romântico</h4>
+                    <p>Prometemos não gastar tudo em comida de rua dessa vez!</p>
+                    <strong>R$ 400,00</strong>
+                </div>
 
-    <!-- JANELA FLUTUANTE DO QR CODE (Fora de qualquer seção, perfeitamente centralizada) -->
-    <div id="modal-presente" class="modal-overlay">
-        <div class="modal-content">
-            <span class="fechar-modal" onclick="fecharModal()">&times;</span>
-            <h3 id="modal-titulo" style="color: #4a4238; margin-top: 0;">Título</h3>
-            <p>Muito obrigado por nos presentear com este item! ❤️</p>
-            <img id="modal-img-qr" src="" alt="QR Code Pix" width="200" style="margin: 15px 0; border-radius: 10px;">
-            <p style="font-size: 1.2em; color: #2e7d32;"><strong>Valor: <span id="modal-valor"></span></strong></p>
-            <p style="font-size: 0.9em; color: #666;">Chave PIX: acnascimento2010@gmail.com</p>
-            <p style="font-size: 0.8em; color: #888;">(Abra o app do seu banco e escaneie o código acima)</p>
-        </div>
-    </div>
+                <div class="card-presente" onclick="abrirModal('Segurança da Noiva', 'qr-500.png', 'R$ 500,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento5204000053039865406500.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCrEB8v54b62D9iiFxdQjaj630459CE')">
+                    <span class="emoji-presente">🏠</span>
+                    <h4>Casa nova</h4>
+                    <p>Ajudar nas próximas mudanças .</p>
+                    <strong>R$ 500,00</strong>
+                </div>
 
-    <!-- SCRIPTS -->
-    <script>
-        const limites = {
-            "Fátima Nascimento": 0, "Júlio Nascimento": 0, "Bárbara Nascimento": 1,
-            "Tânia Cardozo": 0, "Brasilina Cardozo": 0, "Julio Cardozo": 1,
-            "Lenardo Nascimento": 0, "Carla Nascimento": 0, "João Nascimento": 0,
-            "Ronaldo Nascimento": 0, "Elizete Nascimento": 0, "Débora Nascimento": 1,
-            "Gustavo Bertini": 1, "Lucas Amorim": 1, "João Calderano": 1,
-            "João Vitor Soares Pinto": 1, "Vagner Lima": 1, "Pedro Cabral Ribeiro": 1,
-            "José Raisson": 1, "Gabriel Fortes": 1, "Pedro Estrada": 1,
-            "Gilvania Crovatto da Costa": 0, "Sergio Luis da Costa": 0,
-            "Luis Felipe Crovatto (padrinho)": 0, "Leonardo Crovatto (padrinho)": 0,
-            "Aparecida Sevidanes Crovatto": 0, "Gilson Sevidanes Crovatto": 0, "Gilsara Aparecida Crovatto": 0,
-            "André Luis da Costa": 0, "Aline da Costa": 0, "Felipe da Costa": 0, "Bernardo da Costa": 0,
-            "Marco Aurélio da Costa": 0, "Tereza da Costa": 0, "João Victor da Costa": 1,
-            "Lia Borges (madrinha)": 1, "Thamiris Crovato (madrinha)": 1, "Laura Mattos": 0,
-            "Loren Mylena": 0, "Ramon Marques": 0, "Gabrielle Martins": 1, 
-            "Marcela Ruback": 0, "Igor Delgado": 0, "Gabriela Ruback": 0, "Alice Ruback": 0, 
-            "Tatiane Santos": 0, "Breno Nogueira": 0, "Elizabeth Francisco": 0, "Marcelo Carvalho": 0, 
-            "Ângela Francisco": 0, "Alexandre Santos": 0, "Victor Francisco": 0, "Rafael Dias": 0, 
-            "Bruno Carvalho": 0, "Brunno Mendonça": 0, "João Roberto": 0, "Susana": 0, 
-            "Pe João Paulo Dias": 0, "Pe Everton Fernandes": 0, "Pe Leonardo José": 0, "Pe Everaldo Sales": 0
-        };
+                <div class="card-presente" onclick="abrirModal('Fundo do Primeiro Carro', 'qr-750.png', 'R$ 750,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento5204000053039865406750.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCTcpaPPyv3vju2Gs0iDv476304F270')">
+                    <span class="emoji-presente">🚘</span>
+                    <h4>Primeiro Carro</h4>
+                    <p>Ajudinha pra gente se despedir do BlaBlaCar e ClickBus!</p>
+                    <strong>R$ 750,00</strong>
+                </div>
 
-        const inputNome = document.getElementById('nome');
-        const inputAcompanhantes = document.getElementById('acompanhantes');
-        const aviso = document.getElementById('aviso-acompanhantes');
-        const btnConfirmar = document.getElementById('btn-confirmar');
-        
-        inputNome.addEventListener('input', function() {
-            const nomeSelecionado = inputNome.value.trim();
-            
-            if (localStorage.getItem('confirmado_' + nomeSelecionado)) {
-                inputAcompanhantes.max = 0;
-                inputAcompanhantes.value = 0;
-                inputAcompanhantes.readOnly = true;
-                aviso.innerText = "Você já confirmou presença! Obrigado.";
-                aviso.style.color = "#2e7d32";
-                btnConfirmar.disabled = true;
-                btnConfirmar.style.backgroundColor = "#ccc";
-                return;
-            }
+                <div class="card-presente" onclick="abrirModal('Investidor Anjo', 'qr-1000.png', 'R$ 1.000,00', '00020101021226740014BR.GOV.BCB.PIX0126acnascimento2010@gmail.com0222Pagamento acnascimento52040000530398654071000.005802BR5925ANDRE CARDOZO DO NASCIMEN6012JUIZ DE FORA62290525QRCCPCsJjJ4HS8RSOKpC414J76304448E')">
+                    <span class="emoji-presente">👼</span>
+                    <h4>Investidor Anjo</h4>
+                    <p>Ajuda direta na faculdade dos filhos</p>
+                    <strong>R$ 1.000,00</strong>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; font-size: 0.95em; color: #555;">
+                <p><strong>Chave PIX (E-mail):</strong> acnascimento2010@gmail.com</p>
+                <p><strong>Favorecido:</strong> André Cardozo do Nascimento</p>
+            </div>
+        </section>
 
-            btnConfirmar.disabled = false;
-            btnConfirmar.style.backgroundColor = "#4a4238";
+        <!-- JANELA FLUTUANTE DO QR CODE E PIX COPIA E COLA -->
+        <div id="modal-presente" class="modal-overlay">
+            <div class="modal-content" style="max-width: 400px; text-align: center;">
+                <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+                <h3 id="modal-titulo" style="color: #4a4238; margin-top: 0;">Título</h3>
+                <p style="font-size: 0.95em; color: #555;">Muito obrigado por nos presentear com este item! ❤️</p>
+                
+                <!-- QR Code para quem abrir no computador -->
+                <img id="modal-img-qr" src="" alt="QR Code Pix" width="150" style="margin: 5px 0; border-radius: 8px;">
+                <p style="font-size: 1.1em; color: #2e7d32; margin: 5px 0;"><strong>Valor: <span id="modal-valor"></span></strong></p>
+                
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+                
+                <!-- Código Pix Copia e Cola específico do item -->
+                <p style="font-size: 0.85em; color: #666; margin-bottom: 3px;">Está pelo celular? Copie o código Pix abaixo:</p>
+                <div class="pix-copia-cola-box" id="texto-pix"></div>
+                
+                <button class="btn-copiar" onclick="copiarChavePix()">
+                    📋 Copiar Código Pix
+                </button>
+                <p id="aviso-copiado" style="font-size: 0.8em; color: #2e7d32; margin-top: 5px; display: none;">✔ Código Pix copiado com sucesso!</p>
+            </div>
+        </div>
 
-            if (limites.hasOwnProperty(nomeSelecionado)) {
-                const limite = limites[nomeSelecionado];
-                inputAcompanhantes.max = limite; 
-                if (limite === 0) {
-                    inputAcompanhantes.value = 0;
-                    inputAcompanhantes.readOnly = true; 
-                    aviso.innerText = "Seu convite é individual/fechado (sem acompanhantes extras).";
-                    aviso.style.color = "#8b6f56";
-                } else {
-                    inputAcompanhantes.readOnly = false;
-                    aviso.innerText = "Você pode levar até " + limite + " acompanhante. Se for sozinho(a), deixe 0.";
-                    aviso.style.color = "#4a4238";
-                }
-            } else {
-                inputAcompanhantes.max = 0;
-                inputAcompanhantes.value = 0;
-                inputAcompanhantes.readOnly = true;
-                aviso.innerText = "Selecione um nome válido na lista para habilitar.";
-                aviso.style.color = "#666";
-            }
-        });
+    </div>
 
-        const form = document.getElementById('form-presenca');
-        const mensagemSucesso = document.getElementById('mensagem-sucesso');
-        const textoInstrucao = document.getElementById('texto-instrucao');
+    <!-- SCRIPTS -->
+    <script>
+        const limites = {
+            "Fátima Nascimento": 0, "Júlio Nascimento": 0, "Bárbara Nascimento": 1,
+            "Tânia Cardozo": 0, "Brasilina Cardozo": 0, "Julio Cardozo": 1,
+            "Lenardo Nascimento": 0, "Carla Nascimento": 0, "João Nascimento": 0,
+            "Ronaldo Nascimento": 0, "Elizete Nascimento": 0, "Débora Nascimento": 1,
+            "Gustavo Bertini": 1, "Lucas Amorim": 1, "João Calderano": 1,
+            "João Vitor Soares Pinto": 1, "Vagner Lima": 1, "Pedro Cabral Ribeiro": 1,
+            "José Raisson": 1, "Gabriel Fortes": 1, "Pedro Estrada": 1,
+            "Gilvania Crovatto da Costa": 0, "Sergio Luis da Costa": 0,
+            "Luis Felipe Crovatto (padrinho)": 0, "Leonardo Crovatto (padrinho)": 0,
+            "Aparecida Sevidanes Crovatto": 0, "Gilson Sevidanes Crovatto": 0, "Gilsara Aparecida Crovatto": 0,
+            "André Luis da Costa": 0, "Aline da Costa": 0, "Felipe da Costa": 0, "Bernardo da Costa": 0,
+            "Marco Aurélio da Costa": 0, "Tereza da Costa": 0, "João Victor da Costa": 1,
+            "Lia Borges (madrinha)": 1, "Thamiris Crovato (madrinha)": 1, "Laura Mattos": 0,
+            "Loren Mylena": 0, "Ramon Marques": 0, "Gabrielle Martins": 1, 
+            "Marcela Ruback": 0, "Igor Delgado": 0, "Gabriela Ruback": 0, "Alice Ruback": 0, 
+            "Tatiane Santos": 0, "Breno Nogueira": 0, "Elizabeth Francisco": 0, "Marcelo Carvalho": 0, 
+            "Ângela Francisco": 0, "Alexandre Santos": 0, "Victor Francisco": 0, "Rafael Dias": 0, 
+            "Bruno Carvalho": 0, "Brunno Mendonça": 0, "João Roberto": 0, "Susana": 0, 
+            "Pe João Paulo Dias": 0, "Pe Everton Fernandes": 0, "Pe Leonardo José": 0, "Pe Everaldo Sales": 0
+        };
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); 
-            btnConfirmar.innerText = "Enviando...";
-            btnConfirmar.style.backgroundColor = "#8b6f56";
-            btnConfirmar.disabled = true;
+        const inputNome = document.getElementById('nome');
+        const inputAcompanhantes = document.getElementById('acompanhantes');
+        const aviso = document.getElementById('aviso-acompanhantes');
+        const btnConfirmar = document.getElementById('btn-confirmar');
+        
+        inputNome.addEventListener('input', function() {
+            const nomeSelecionado = inputNome.value.trim();
+            
+            if (localStorage.getItem('confirmado_' + nomeSelecionado)) {
+                inputAcompanhantes.max = 0;
+                inputAcompanhantes.value = 0;
+                inputAcompanhantes.readOnly = true;
+                aviso.innerText = "Você já confirmou presença! Obrigado.";
+                aviso.style.color = "#2e7d32";
+                btnConfirmar.disabled = true;
+                btnConfirmar.style.backgroundColor = "#ccc";
+                return;
+            }
 
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                mode: 'no-cors' 
-            }).then(() => {
-                const nomeConfirmado = inputNome.value.trim();
-                localStorage.setItem('confirmado_' + nomeConfirmado, 'sim');
+            btnConfirmar.disabled = false;
+            btnConfirmar.style.backgroundColor = "#4a4238";
 
-                form.style.display = 'none';
-                if(textoInstrucao) textoInstrucao.style.display = 'none';
-                mensagemSucesso.style.display = 'block';
-            }).catch(() => {
-                alert("Houve um erro na conexão. Tente novamente.");
-                btnConfirmar.innerText = "Confirmar";
-                btnConfirmar.disabled = false;
-                btnConfirmar.style.backgroundColor = "#4a4238";
-            });
-        });
+            if (limites.hasOwnProperty(nomeSelecionado)) {
+                const limite = limites[nomeSelecionado];
+                inputAcompanhantes.max = limite; 
+                if (limite === 0) {
+                    inputAcompanhantes.value = 0;
+                    inputAcompanhantes.readOnly = true; 
+                    aviso.innerText = "Seu convite é individual/fechado (sem acompanhantes extras).";
+                    aviso.style.color = "#8b6f56";
+                } else {
+                    inputAcompanhantes.readOnly = false;
+                    aviso.innerText = "Você pode levar até " + limite + " acompanhante. Se for sozinho(a), deixe 0.";
+                    aviso.style.color = "#4a4238";
+                }
+            } else {
+                inputAcompanhantes.max = 0;
+                inputAcompanhantes.value = 0;
+                inputAcompanhantes.readOnly = true;
+                aviso.innerText = "Selecione um nome válido na lista para habilitar.";
+                aviso.style.color = "#666";
+            }
+        });
 
-        function abrirModal(titulo, imagemQr, valor) {
-            document.getElementById('modal-titulo').innerText = titulo;
-            document.getElementById('modal-img-qr').src = 'img/' + imagemQr;
-            document.getElementById('modal-valor').innerText = valor;
-            document.getElementById('modal-presente').style.display = 'flex';
-        }
+        const form = document.getElementById('form-presenca');
+        const mensagemSucesso = document.getElementById('mensagem-sucesso');
+        const textoInstrucao = document.getElementById('texto-instrucao');
 
-        function fecharModal() {
-            document.getElementById('modal-presente').style.display = 'none';
-        }
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            btnConfirmar.innerText = "Enviando...";
+            btnConfirmar.style.backgroundColor = "#8b6f56";
+            btnConfirmar.disabled = true;
 
-        // Efeito de transição fluida ao rolar a página
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll("section");
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                mode: 'no-cors' 
+            }).then(() => {
+                const nomeConfirmado = inputNome.value.trim();
+                localStorage.setItem('confirmado_' + nomeConfirmado, 'sim');
 
-            const observer = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visivel");
-                    }
-                });
-            }, {
-                threshold: 0.15 
-            });
+                form.style.display = 'none';
+                if(textoInstrucao) textoInstrucao.style.display = 'none';
+                mensagemSucesso.style.display = 'block';
+            }).catch(() => {
+                alert("Houve um erro na conexão. Tente novamente.");
+                btnConfirmar.innerText = "Confirmar";
+                btnConfirmar.disabled = false;
+                btnConfirmar.style.backgroundColor = "#4a4238";
+            });
+        });
 
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
+        function revelarConvite() {
+            document.getElementById('pagina-carta').style.display = 'none';
+            document.getElementById('conteudo-principal').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function abrirModal(titulo, imagemQr, valor, copiaECola) {
+            document.getElementById('modal-titulo').innerText = titulo;
+            document.getElementById('modal-img-qr').src = 'img/' + imagemQr;
+            document.getElementById('modal-valor').innerText = valor;
+            document.getElementById('texto-pix').innerText = copiaECola;
+            document.getElementById('modal-presente').style.display = 'flex';
+            document.getElementById('aviso-copiado').style.display = 'none';
+        }
+
+        function fecharModal() {
+            document.getElementById('modal-presente').style.display = 'none';
+        }
+
+        function copiarChavePix() {
+            const textoPix = document.getElementById('texto-pix').innerText;
+            navigator.clipboard.writeText(textoPix).then(() => {
+                const aviso = document.getElementById('aviso-copiado');
+                aviso.style.display = 'block';
+                setTimeout(() => {
+                    aviso.style.display = 'none';
+                }, 3000);
+            }).catch(err => {
+                alert('Erro ao copiar o código. Tente selecionar manualmente.');
+            });
+        }
+
+        // Efeito de transição fluida ao rolar a página
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+
+            const observer = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visivel");
+                    }
+                });
+            }, {
+                threshold: 0.15 
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
