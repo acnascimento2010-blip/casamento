@@ -112,6 +112,12 @@
         .btn-copiar:hover {
             background-color: #235d26;
         }
+
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     </style>
 </head>
 <body>
@@ -152,20 +158,44 @@
         <p>A Bênção Nupcial</p>
     </header>
 
-    <!-- INFORMAÇÕES DA CERIMÔNIA -->
+    <!-- INFORMAÇÕES DA CERIMÔNIA E FESTA -->
     <section id="informacoes">
-        <h2>A Cerimônia</h2>
-        <p style="text-align: center; margin-bottom: 25px; color: #555; font-size: 0.95em;">Queridos amigos e familiares, é com imensa alegria que convidamos vocês para testemunharem o nosso sim perante o altar.</p>
+        <h2>A Cerimônia e Comemoração</h2>
+        <p style="text-align: center; margin-bottom: 25px; color: #555; font-size: 0.95em;">Queridos amigos e familiares, é com imensa alegria que convidamos vocês para testemunharem o nosso sim perante o altar e celebrarem conosco!</p>
 
-        <div class="card-local" style="max-width: 100%; width: 100%; box-sizing: border-box;">
-            <h3>💍 Cerimônia Religiosa</h3>
-            <p><strong>Local:</strong> Igreja São Sebastião</p>
-            <p><strong>Endereço:</strong> Praça Hermenegildo Vilaça - Centro, Juiz de Fora - MG, 36015-510</p>
-            <p><strong>Horário:</strong> Dia 16 de janeiro às 11:00 (Sugerimos chegar com 20 min de antecedência)</p>
+        <div class="cards-container">
+            <!-- CARD CERIMÔNIA -->
+            <div class="card-local" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+                <h3>💍 Cerimônia Religiosa</h3>
+                <p><strong>Local:</strong> Igreja São Sebastião</p>
+                <p><strong>Endereço:</strong> Praça Hermenegildo Vilaça - Centro, Juiz de Fora - MG, 36015-510</p>
+                <p><strong>Horário:</strong> Dia 16 de janeiro às 11:00 (Sugerimos chegar com 20 min de antecedência)</p>
 
-            <a href="https://maps.google.com/?q=Igreja+Sao+Sebastiao+Juiz+de+Fora" target="_blank" class="btn-maps">
-                📍 Ver no Google Maps
-            </a>
+                <a href="https://maps.google.com/?q=Igreja+Sao+Sebastiao+Juiz+de+Fora" target="_blank" class="btn-maps">
+                    📍 Ver no Google Maps
+                </a>
+            </div>
+
+            <!-- CARD RECEPÇÃO -->
+            <div class="card-local" style="max-width: 100%; width: 100%; box-sizing: border-box;">
+                <h3>🥂 Comemoração</h3>
+                <p><strong>Local:</strong> Espaço de Festas</p>
+                <p><strong>Endereço:</strong> Juiz de Fora - MG</p>
+                <p><strong>Horário:</strong> Logo após a cerimônia religiosa</p>
+
+                <a href="https://maps.google.com/?q=Juiz+de+Fora" target="_blank" class="btn-maps">
+                    📍 Ver no Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAJE / DRESS CODE -->
+    <section id="traje">
+        <h2>Traje</h2>
+        <div style="text-align: center;">
+            <p style="font-size: 1.1em; color: #4a4238; margin-bottom: 10px;"><strong>Esporte Fino / Passeio Completo</strong></p>
+            <p style="color: #555; font-size: 0.95em;">Pedimos a gentileza de evitar trajes brancos ou off-white, reservados para a noiva.</p>
         </div>
     </section>
 
